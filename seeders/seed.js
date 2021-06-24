@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Workout = require('../models/Workouts');
 
-mongoose.connect('mongodb://localhost/workout', {
+mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useFindAndModify: false,
   useUnifiedTopology: true,
